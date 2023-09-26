@@ -115,6 +115,7 @@ body {
 .small {
   border: 5px solid rgb(58, 77, 108);;
   height: 150px;
+  border-radius: 10px;
 }
 
 .contactMe {
@@ -141,40 +142,45 @@ body {
   
 }
 
-.toDoList {
+.mainBlock {
   background-image: url('./images/to-dolist-templates-header.jpg');
+  background-size: cover;
+  opacity: .5;
+  transition: .5s;
 }
 
-.calculator {
-  background-image: url('./images/wallpaper.jpg');
-}
-
-.ledWall {
+.block1 {
   background-image: url('./images/lightupwall.jfif');
   background-size: cover;
+  opacity: .5;
+  transition: .5s;
 }
 
-.runBuddy {
-  background-image: url('./images/running.jpg');
-  background-size: cover;
+.block2 {
+  background-image: url('./images/wallpaper.jpg');
+  opacity: .5;
+  transition: .5s;
 }
 
-.pastelPuzzle {
+.block3 {
   background-image: url('./images/pastels.jpg');
   background-size: cover;
-}
-
-
-
-.large,
-.small {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  opacity: .5;
   transition: .5s;
-  cursor: pointer;
 }
+
+.block4 {
+  background-image: url('./images/running.jpg');
+  background-size: cover;
+  opacity: .5;
+  transition: .5s;
+}
+
+
+
+
+
+
 
 .title {
   padding: 10px;  font-size: 40px;
@@ -187,26 +193,64 @@ body {
   border-radius: 10px;
 }
 
-.large:hover > .title,
-.small:hover > .title {
-  letter-spacing: 3px;
-  background-color: rgb(0, 0, 0);
-  opacity: 1;
-  
-  box-shadow: 0 0 35px black;
-
-  
-}
-
 .title a:visited {
   color: black;
 }
 
-.title:hover a,
-.large:hover a,
-.small:hover a {
-  color: rgb(255, 255, 255);
+
+
+
+
+
+.small a{
+  height: 100%;
+  width: 100%;
 }
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  transition: .5s;
+
+  font-size: 24px;
+}
+
+
+.project span {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  opacity: .5;
+  height: 35%;
+  width: 35%;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .5s;
+  border-radius: 10px;
+  
+}
+
+.project:hover > span {
+  color: rgb(0, 0, 0);
+  opacity: .8;
+
+  letter-spacing: 3px;
+  height: 45%;
+  width: 45%;
+}
+
+.small:hover,
+.large:hover {
+  opacity: 1;
+}
+
+
 
 
 
@@ -286,5 +330,15 @@ body {
   .profile h1,
   .profile img {
     margin: 10px 0;
+  }
+
+  .project span {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .small,
+  .large {
+    opacity: 1;
   }
 }

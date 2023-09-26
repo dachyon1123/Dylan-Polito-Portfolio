@@ -205,6 +205,12 @@ body {
 }
 
 
+:-webkit-any-link {
+  color: inherit; /* or specify the color you want */
+  cursor: inherit; /* or specify the cursor you want */
+  text-decoration: none; /* remove underline */
+}
+
 
 @media screen and (max-width: 860px) {
   .header {
